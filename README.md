@@ -9,7 +9,7 @@ Goodheart, Jessica A., Bleidißel, Sabrina, Schillo, Dorothee, Ayres, Daniel L.,
 
 This code, along with the data table used as input, can be found in the ancestral_state_reconstruction directory. The .tre file used for the analysis can be found in dryad ([web address here]).
 
-## IndOrigin Analysis
+## IndOrigin Analyses
 
 The code and tree files used for this analysis can be found in the indorigin directory.
 
