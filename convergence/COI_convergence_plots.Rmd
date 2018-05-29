@@ -1,0 +1,92 @@
+---
+title: "COI Convergence Plots"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(dev = 'png')
+```
+
+This document contains plots and statistics for evaluating the convergence of COI MrBayes runs performed in this paper. Assessment of convergence used the web address http://danwarren.net/plot-comparisons.html written by the authors of the package **RWTY**. 
+
+It seems that both COI runs have converged. The approximate sampling Estimated Sample Size (ESS) and topology ESS are both above 200 (standard rule of thumb). The tree topology trace shows well-mixed chains and a clear optimum, cumulative split frequencies seem to have become fairly stable, sliding window split frequencies show large jumps, but a clear search of the tree space and both runs seem to have converged on similar posterior probabilities, as shown by the split frequency comparisons. The average standard deviation of split frequencies (ASDSF) is below 0.01 and shows a decrease to a plateau, as expected. Tree space plots show both runs searching similar areas of tree space and well-mixed chains. The topological autocorrelation plots also appear to have reached a plateau for each run.
+
+## Analysis code
+
+```{r code}
+library(rwty)
+library(ape)
+
+# Pull in the trees (only need to indicate a folder)
+my.trees <- load.multi("COI", format='mb')
+
+# Set burn in
+burnin_val <- 2500
+
+# Analysis of trees using **RWTY**
+my.trees.rwty <- analyze.rwty(my.trees, burnin=burnin_val, fill.color='LnL')
+
+# Approximate ESS for topologies
+topological.approx.ess(my.trees,burnin=burnin_val)
+```
+
+\newpage
+## Plots
+
+### Estimated Sample Size
+
+```{r ESS, , dpi=300}
+makeplot.pseudo.ess(my.trees, burnin = 2500)
+```
+
+\newpage
+### Parameter plot
+
+```{r LnL, fig.align='center', message=FALSE, warning=FALSE, fig.height = 3, fig.width = 5, dpi=300}
+my.trees.rwty$LnL.trace[[1]]
+my.trees.rwty$LnL.trace[[2]]
+```
+
+\newpage
+### Topology trace plots
+
+```{r top, fig.align='center', message=FALSE, warning=FALSE, fig.height = 3, fig.width = 5, dpi=300}
+my.trees.rwty$topology.trace.plot[[1]]
+my.trees.rwty$topology.trace.plot[[2]]
+```
+
+\newpage
+### Split frequency plots 
+
+```{r split.cumulative, fig.align='center', message=FALSE, warning=FALSE, fig.height = 3, fig.width = 5, dpi=300}
+my.trees.rwty$splitfreqs.cumulative.plot
+```
+
+```{r split.sliding, fig.align='center', message=FALSE, warning=FALSE, fig.height = 3, fig.width = 5, dpi=300} 
+my.trees.rwty$splitfreqs.sliding.plot
+```
+
+```{r splitmatrix, fig.align='center', message=FALSE, warning=FALSE, fig.height = 3, fig.width = 5, dpi=300}
+my.trees.rwty$splitfreq.matrix
+my.trees.rwty$asdsf.plot
+```
+
+\newpage
+### Tree space plots 
+
+```{r treespace,fig.align='center', message=FALSE, warning=FALSE, fig.height = 3, fig.width = 5, dpi=300}
+my.trees.rwty$treespace.heatmap
+```
+
+```{r treespace.points,fig.align='center', message=FALSE, warning=FALSE, fig.height = 3, fig.width = 5, dpi=300}
+my.trees.rwty$treespace.points.plot
+```
+
+\newpage
+### Autocorrelation plots
+
+```{r autocorr,fig.align='center', message=FALSE, warning=FALSE, dpi=300}
+my.trees.rwty$autocorr.plot
+```
+
