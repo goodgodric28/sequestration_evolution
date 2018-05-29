@@ -1,5 +1,3 @@
-\usepackage[utf8]{inputenc}
-
 # Nematocyst sequestration evolution
 
 This repository contains the code and data used for running analyses and generating supplementary pdfs for the paper entitled, "Comparative morphology and evolution of the cnidosac in Cladobranchia (Gastropoda: Heterobranchia: Nudibranchia)."
