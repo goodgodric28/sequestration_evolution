@@ -3,7 +3,7 @@
 This repository contains the code and data used for running analyses and generating supplementary pdfs for the paper entitled, "Comparative morphology and evolution of the cnidosac in Cladobranchia (Gastropoda: Heterobranchia: Nudibranchia)."
 
 **Citation:** 
-Goodheart, Jessica A., Bleiﬂdiüel, Sabrina, Schillo, Dorothee, Ayres, Daniel L., Strong, Ellen E., Collins, Allen G., Cummings, Michael P. & W‰gele, Heike. In prep. Comparative morphology and evolution of the cnidosac in Cladobranchia (Gastropoda: Heterobranchia: Nudibranchia).
+Goodheart, Jessica A., Blei{\ss}diüel, Sabrina, Schillo, Dorothee, Ayres, Daniel L., Strong, Ellen E., Collins, Allen G., Cummings, Michael P. & W‰gele, Heike. In prep. Comparative morphology and evolution of the cnidosac in Cladobranchia (Gastropoda: Heterobranchia: Nudibranchia).
 
 ## Ancestral State Reconstruction Analyses
 
