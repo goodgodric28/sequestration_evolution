@@ -79,7 +79,7 @@ AICcCustom(fitSYM$loglik, 1, return.K = FALSE, second.ord = TRUE, nobs = 37, c.h
 AICcCustom(fitARD$loglik, 1, return.K = FALSE, second.ord = TRUE, nobs = 37, c.hat = 1)
 
 #####
-# The ER model is supported as the best fit by AIC, AICc, and likelihood ratio tests
+# The ARD model is supported as the best fit by the AICc.
 #####
 
 # Create an ultrametric tree with correlated model, output of chronos 
@@ -135,7 +135,9 @@ AICcCustom(fitER.sac$loglik, 1, return.K = FALSE, second.ord = TRUE, nobs = 37, 
 AICcCustom(fitSYM.sac$loglik, 1, return.K = FALSE, second.ord = TRUE, nobs = 37, c.hat = 1)
 AICcCustom(fitARD.sac$loglik, 1, return.K = FALSE, second.ord = TRUE, nobs = 37, c.hat = 1)
 
+#######
 # ARD model is supported as the best fit by AIC, AICc, and likelihood ratio tests
+#######
 
 # Set the colors for each set of labels for plotting
 cols.sac <- morph_data$color.sac
