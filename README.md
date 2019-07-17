@@ -7,7 +7,7 @@ Goodheart, Jessica A., Bleidi&szlig;el, Sabrina, Schillo, Dorothee, Ayres, Danie
 
 ## Ancestral State Reconstruction Analyses
 
-This code, along with the data table used as input, can be found in the ancestral_state_reconstruction directory. The .tre file and .aln file used for the analysis can be found in dryad (<https://datadryad.org/resource/doi:10.5061/dryad.cg3c5r5?show=full).
+This code, along with the data table used as input, can be found in the ancestral_state_reconstruction directory. The .tre file and .aln file used for the analysis can be found in dryad (https://datadryad.org/resource/doi:10.5061/dryad.cg3c5r5?show=full).
 
 ## Convergence Plots and Statistics
 
